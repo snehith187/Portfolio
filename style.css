@@ -382,23 +382,50 @@ body{
 
 .contact-card{
     text-align:center;
-    padding:60px 40px;
+    padding:80px 40px;
 }
 
 .contact-card h2{
-    margin-bottom:15px;
+    font-size:2.2rem;
+    margin-bottom:20px;
 }
 
 .contact-card p{
     color:var(--muted);
+    max-width:650px;
+    margin:0 auto 35px;
+    line-height:1.8;
 }
 
-.contact-info{
+.contact-actions{
     display:flex;
     justify-content:center;
-    gap:30px;
+    align-items:center;
+    gap:20px;
     flex-wrap:wrap;
-    margin-top:30px;
+    margin-top:20px;
+}
+
+.contact-actions a{
+    text-decoration:none;
+}
+
+.contact-link{
+    display:block;
+    text-decoration:none;
+    color:white;
+    margin:10px 0;
+    transition:.3s;
+}
+
+.contact-link:hover{
+    color:var(--primary);
+}
+
+.contact-location{
+    display:block;
+    margin-top:10px;
+    color:var(--muted);
 }
 
 /* ANIMATION */
