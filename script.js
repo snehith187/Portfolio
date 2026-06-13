@@ -1,61 +1,6 @@
-// =========================
-// SCROLL REVEAL ANIMATION
-// =========================
-
-const revealElements = document.querySelectorAll(
-    ".glass-card, .project-card, .skill-pill, .timeline-item"
-);
-
-revealElements.forEach((el) => {
-    el.classList.add("hidden");
-});
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    },
-    {
-        threshold: 0.15,
-    }
-);
-
-revealElements.forEach((el) => {
-    observer.observe(el);
-});
-
-
-// =========================
-// NAVBAR SCROLL EFFECT
-// =========================
-
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 50) {
-
-        header.style.background = "rgba(7,11,20,0.92)";
-        header.style.borderBottom =
-            "1px solid rgba(255,255,255,0.08)";
-        header.style.backdropFilter = "blur(20px)";
-
-    } else {
-
-        header.style.background = "rgba(7,11,20,0.60)";
-        header.style.borderBottom =
-            "1px solid rgba(255,255,255,0.05)";
-    }
-
-});
-
-
-// =========================
-// ACTIVE MENU HIGHLIGHT
-// =========================
+// ===============================
+// Smooth Active Navigation
+// ===============================
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
@@ -66,12 +11,12 @@ window.addEventListener("scroll", () => {
 
     sections.forEach((section) => {
 
-        const sectionTop = section.offsetTop - 150;
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
 
         if (
-            pageYOffset >= sectionTop &&
-            pageYOffset < sectionTop + sectionHeight
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
         ) {
             current = section.getAttribute("id");
         }
@@ -83,8 +28,7 @@ window.addEventListener("scroll", () => {
         link.classList.remove("active");
 
         if (
-            link.getAttribute("href") ===
-            `#${current}`
+            link.getAttribute("href") === `#${current}`
         ) {
             link.classList.add("active");
         }
@@ -94,94 +38,101 @@ window.addEventListener("scroll", () => {
 });
 
 
-// =========================
-// HOVER EFFECT ON PROJECTS
-// =========================
+// ===============================
+// Scroll Reveal Animation
+// ===============================
+
+const revealElements = document.querySelectorAll(
+    ".glass-card, .skill-pill, .project-card, .profile-card"
+);
+
+const observer = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.15
+    }
+
+);
+
+revealElements.forEach((element) => {
+
+    element.classList.add("hidden");
+    observer.observe(element);
+
+});
+
+
+// ===============================
+// Navbar Background Effect
+// ===============================
+
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 40) {
+
+        header.style.background =
+            "rgba(11,17,32,0.97)";
+
+        header.style.boxShadow =
+            "0 8px 30px rgba(0,0,0,0.25)";
+
+    } else {
+
+        header.style.background =
+            "rgba(11,17,32,0.92)";
+
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+
+// ===============================
+// Project Card Hover Effect
+// ===============================
 
 const cards = document.querySelectorAll(".project-card");
 
 cards.forEach((card) => {
 
-    card.addEventListener("mousemove", (e) => {
+    card.addEventListener("mouseenter", () => {
 
-        const rect = card.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        card.style.background = `
-        radial-gradient(
-            circle at ${x}px ${y}px,
-            rgba(96,165,250,0.12),
-            rgba(255,255,255,0.05)
-        )
-        `;
+        card.style.transform =
+            "translateY(-8px)";
 
     });
 
     card.addEventListener("mouseleave", () => {
 
-        card.style.background =
-            "rgba(255,255,255,0.05)";
+        card.style.transform =
+            "translateY(0px)";
 
     });
 
 });
 
 
-// =========================
-// SMOOTH BUTTON ANIMATION
-// =========================
+// ===============================
+// Console Message
+// ===============================
 
-const buttons = document.querySelectorAll(
-    ".primary-btn, .secondary-btn, .resume-btn"
+console.log(
+    "Kamani Snehith Portfolio Loaded Successfully 🚀"
 );
-
-buttons.forEach((btn) => {
-
-    btn.addEventListener("mouseenter", () => {
-
-        btn.style.transform = "translateY(-3px)";
-
-    });
-
-    btn.addEventListener("mouseleave", () => {
-
-        btn.style.transform = "translateY(0px)";
-
-    });
-
-});
-
-
-// =========================
-// PROFILE CARD FLOAT EFFECT
-// =========================
-
-const profileCard = document.querySelector(".profile-card");
-
-if (profileCard) {
-
-    document.addEventListener("mousemove", (e) => {
-
-        const x =
-            (window.innerWidth / 2 - e.pageX) / 50;
-
-        const y =
-            (window.innerHeight / 2 - e.pageY) / 50;
-
-        profileCard.style.transform =
-            `rotateY(${x}deg) rotateX(${-y}deg)`;
-
-    });
-
-}
-
-
-// =========================
-// CONSOLE MESSAGE
-// =========================
-
-// console.log(
-//     "Portfolio Developed by Kamani Snehith 🚀"
-// );
