@@ -446,3 +446,22 @@ body{
     }
 
 }
+.active{
+    color:#60a5fa !important;
+}
+
+.project-card{
+    transition:
+        transform .35s ease,
+        background .35s ease;
+}
+
+.profile-card{
+    transition:transform .25s ease;
+}
+
+.primary-btn,
+.secondary-btn,
+.resume-btn{
+    transition:.3s ease;
+}
