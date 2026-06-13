@@ -1,429 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kamani Snehith | Software Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamani Snehith | Software Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#0f172a;
-    color:#fff;
-    line-height:1.6;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(15,23,42,.95);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-.logo{
-    font-size:1.5rem;
-    font-weight:700;
-    color:#38bdf8;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#38bdf8;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding-top:80px;
-}
-
-.hero h1{
-    font-size:4rem;
-    margin-bottom:10px;
-}
-
-.hero span{
-    color:#38bdf8;
-}
-
-.hero p{
-    color:#cbd5e1;
-    max-width:700px;
-    margin:20px auto;
-}
-
-.btn{
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.primary{
-    background:#38bdf8;
-    color:#000;
-    font-weight:600;
-}
-
-.secondary{
-    border:1px solid #38bdf8;
-    color:#38bdf8;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-section{
-    padding:100px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:50px;
-    color:#38bdf8;
-}
-
-.about{
-    text-align:center;
-}
-
-.about p{
-    max-width:900px;
-    margin:auto;
-    color:#cbd5e1;
-}
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.skill-card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    transition:.3s;
-}
-
-.skill-card:hover{
-    transform:translateY(-8px);
-}
-
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-.project-card{
-    background:#1e293b;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-10px);
-}
-
-.project-content{
-    padding:25px;
-}
-
-.project-title{
-    color:#38bdf8;
-    margin-bottom:10px;
-}
-
-.project-tech{
-    margin-top:15px;
-    font-size:.9rem;
-    color:#94a3b8;
-}
-
-.experience-card{
-    background:#1e293b;
-    padding:30px;
-    border-radius:15px;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin:10px 0;
-}
-
-footer{
-    text-align:center;
-    padding:25px;
-    border-top:1px solid #334155;
-    color:#94a3b8;
-}
-
-.fade{
-    opacity:0;
-    transform:translateY(30px);
-    transition:all .8s ease;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-@media(max-width:768px){
-    .hero h1{
-        font-size:2.5rem;
-    }
-
-    nav ul{
-        display:none;
-    }
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-<div class="container">
-<nav>
-<div class="logo">KS</div>
+    <div class="bg-gradient gradient-1"></div>
+    <div class="bg-gradient gradient-2"></div>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <!-- NAVBAR -->
 
-<section class="hero">
-<div class="container fade">
-<h1>Hi, I'm <span>Kamani Snehith</span></h1>
+    <header class="header">
 
-<h2>Software Engineer | .NET Developer</h2>
+        <div class="container">
 
-<p>
-Software Engineer with 1 year of experience building enterprise applications
-using C#, ASP.NET Core, SQL Server, REST APIs, and Microservices.
-Experienced in WCF to Microservices migration and backend development.
-</p>
+            <nav class="navbar">
 
-<a href="snehith_res.pdf" download class="btn primary">
-Download Resume
-</a>
+                <div class="logo">
+                    KS.
+                </div>
 
-<a href="#contact" class="btn secondary">
-Contact Me
-</a>
-</div>
-</section>
+                <ul class="nav-links">
 
-<section id="about">
-<div class="container fade">
-<h2 class="section-title">About Me</h2>
+                    <li><a href="#about">About</a></li>
 
-<div class="about">
-<p>
-I am a Software Engineer currently working at Novac Technology Solutions.
-My expertise includes developing scalable backend systems, designing APIs,
-working with SQL Server, and modernizing legacy applications into
-Microservices architecture using .NET technologies.
-</p>
-</div>
-</div>
-</section>
+                    <li><a href="#experience">Experience</a></li>
 
-<section id="skills">
-<div class="container fade">
-<h2 class="section-title">Technical Skills</h2>
+                    <li><a href="#skills">Skills</a></li>
 
-<div class="skills-grid">
+                    <li><a href="#projects">Projects</a></li>
 
-<div class="skill-card">C#</div>
-<div class="skill-card">ASP.NET Core</div>
-<div class="skill-card">.NET Framework</div>
-<div class="skill-card">Web API</div>
-<div class="skill-card">Microservices</div>
-<div class="skill-card">Entity Framework</div>
-<div class="skill-card">SQL Server</div>
-<div class="skill-card">Stored Procedures</div>
-<div class="skill-card">JavaScript</div>
-<div class="skill-card">HTML/CSS</div>
-<div class="skill-card">Git</div>
-<div class="skill-card">REST APIs</div>
+                    <li><a href="#contact">Contact</a></li>
 
-</div>
-</div>
-</section>
+                </ul>
 
-<section id="experience">
-<div class="container fade">
-<h2 class="section-title">Experience</h2>
+                <a href="snehith_res.pdf" class="resume-btn" download>
+                    Resume
+                </a>
 
-<div class="experience-card">
-<h3>Software Engineer Trainee</h3>
-<h4>Novac Technology Solutions</h4>
-<p>July 2025 – Present</p>
+            </nav>
 
-<br>
+        </div>
 
-<ul>
-<li>Migrating WCF applications to Microservices architecture.</li>
-<li>Developing REST APIs using ASP.NET Core.</li>
-<li>Creating new backend services and endpoints.</li>
-<li>Developing SQL Server Stored Procedures.</li>
-<li>Maintaining scalable enterprise applications.</li>
-<li>Collaborating with development teams using Git.</li>
-</ul>
-</div>
-</div>
-</section>
+    </header>
 
-<section id="projects">
-<div class="container fade">
-<h2 class="section-title">Projects</h2>
+    <!-- HERO -->
 
-<div class="projects-grid">
+    <section class="hero">
 
-<div class="project-card">
-<div class="project-content">
-<h3 class="project-title">Yard App Modernization</h3>
+        <div class="container hero-grid">
 
-<p>
-Migrated legacy WCF services to modern Microservices architecture and developed new APIs.
-</p>
+            <div class="hero-content">
 
-<div class="project-tech">
-.NET 10 • ASP.NET Core • SQL Server • Microservices
-</div>
-</div>
-</div>
+                <p class="hero-tag">
+                    SOFTWARE ENGINEER • .NET DEVELOPER
+                </p>
 
-<div class="project-card">
-<div class="project-content">
-<h3 class="project-title">Employee Management System</h3>
+                <h1>
+                    Building Scalable Backend Solutions
+                    For Enterprise Applications
+                </h1>
 
-<p>
-Web application for managing employee records, departments, and reporting.
-</p>
+                <p class="hero-description">
 
-<div class="project-tech">
-ASP.NET Core • Entity Framework • SQL Server
-</div>
-</div>
-</div>
+                    Software Engineer specializing in ASP.NET Core,
+                    REST APIs, SQL Server and Microservices.
 
-<div class="project-card">
-<div class="project-content">
-<h3 class="project-title">Task Management API</h3>
+                    Currently contributing to enterprise application
+                    modernization initiatives at Novac Technology Solutions.
 
-<p>
-REST API supporting task assignment, tracking, authentication, and reporting.
-</p>
+                </p>
 
-<div class="project-tech">
-ASP.NET Core Web API • SQL Server • JWT
-</div>
-</div>
-</div>
+                <div class="hero-buttons">
 
-</div>
-</div>
-</section>
+                    <a href="#projects" class="primary-btn">
+                        View Projects
+                    </a>
 
-<section id="contact">
-<div class="container fade">
-<h2 class="section-title">Contact</h2>
+                    <a href="snehith_res.pdf" class="secondary-btn" download>
+                        Download Resume
+                    </a>
 
-<div class="contact">
-<p>📧 snehithkamani@gmail.com</p>
-<p>📱 +91 8247840699</p>
-<p>📍 Hyderabad, India</p>
+                </div>
 
-<br>
+            </div>
 
-<a href="https://github.com/" target="_blank" class="btn secondary">
-GitHub
-</a>
+            <div class="profile-card">
 
-<a href="https://linkedin.com/" target="_blank" class="btn primary">
-LinkedIn
-</a>
+                <div class="profile-top">
 
-</div>
-</div>
-</section>
+                    <h3>
+                        Software Engineer
+                    </h3>
 
-<footer>
-<p>© 2026 Kamani Snehith. All Rights Reserved.</p>
-</footer>
+                    <span>
+                        Novac Technology Solutions
+                    </span>
 
-<script>
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-});
+                </div>
 
-document.querySelectorAll('.fade').forEach((el)=>{
-    observer.observe(el);
-});
-</script>
+                <div class="stats-grid">
+
+                    <div class="stat-box">
+                        <h2>1+</h2>
+                        <p>Years Experience</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2>20+</h2>
+                        <p>APIs Developed</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2>.NET</h2>
+                        <p>Backend Development</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2>SQL</h2>
+                        <p>Database Solutions</p>
+                    </div>
+
+                </div>
+
+                <div class="current-work">
+
+                    <h4>
+                        Currently Working On
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            WCF → Microservices Migration
+                        </li>
+
+                        <li>
+                            ASP.NET Core API Development
+                        </li>
+
+                        <li>
+                            SQL Server Optimization
+                        </li>
+
+                        <li>
+                            Enterprise Application Modernization
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>01</span>
+
+                <h2>Who I Am</h2>
+
+            </div>
+
+            <div class="glass-card about-card">
+
+                <p>
+
+                    I'm Kamani Snehith, a Software Engineer with experience
+                    developing enterprise-grade applications using
+                    C#, ASP.NET Core, SQL Server, REST APIs, and Microservices.
+
+                    I currently work at Novac Technology Solutions where I
+                    contribute to WCF modernization initiatives, API development,
+                    backend services, and enterprise software transformation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>02</span>
+
+                <h2>Professional Experience</h2>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content glass-card">
+
+                        <span class="year">
+                            Jul 2025 - Present
+                        </span>
+
+                        <h3>
+                            Software Engineer Trainee
+                        </h3>
+
+                        <h4>
+                            Novac Technology Solutions
+                        </h4>
+
+                        <ul>
+
+                            <li>
+                                Migrating legacy WCF applications into Microservices architecture.
+                            </li>
+
+                            <li>
+                                Developing scalable ASP.NET Core REST APIs.
+                            </li>
+
+                            <li>
+                                Creating SQL Server Stored Procedures and backend logic.
+                            </li>
+
+                            <li>
+                                Supporting enterprise modernization initiatives.
+                            </li>
+
+                            <li>
+                                Collaborating with development teams using Git.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>03</span>
+
+                <h2>Technology Stack</h2>
+
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-pill">C#</div>
+                <div class="skill-pill">ASP.NET Core</div>
+                <div class="skill-pill">.NET Framework</div>
+                <div class="skill-pill">REST APIs</div>
+                <div class="skill-pill">SQL Server</div>
+                <div class="skill-pill">Entity Framework</div>
+                <div class="skill-pill">Microservices</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">HTML</div>
+                <div class="skill-pill">CSS</div>
+                <div class="skill-pill">Git</div>
+                <div class="skill-pill">Stored Procedures</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>04</span>
+
+                <h2>Featured Work</h2>
+
+            </div>
+
+            <div class="project-grid">
+
+                <div class="project-card glass-card">
+
+                    <h3>Yard App Modernization</h3>
+
+                    <p>
+
+                        Migrated legacy WCF architecture into modern Microservices
+                        and developed backend APIs for enterprise-scale operations.
+
+                    </p>
+
+                    <div class="tech-tags">
+
+                        <span>.NET 10</span>
+                        <span>ASP.NET Core</span>
+                        <span>SQL Server</span>
+                        <span>Microservices</span>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card glass-card">
+
+                    <h3>Employee Management System</h3>
+
+                    <p>
+
+                        ASP.NET Core application for managing employee records,
+                        departments and business operations.
+
+                    </p>
+
+                    <div class="tech-tags">
+
+                        <span>ASP.NET Core</span>
+                        <span>EF Core</span>
+                        <span>SQL Server</span>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card glass-card">
+
+                    <h3>Task Management API</h3>
+
+                    <p>
+
+                        REST API supporting task assignment, authentication,
+                        project tracking and reporting.
+
+                    </p>
+
+                    <div class="tech-tags">
+
+                        <span>Web API</span>
+                        <span>JWT</span>
+                        <span>SQL Server</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="section">
+
+        <div class="container">
+
+            <div class="contact-card glass-card">
+
+                <h2>
+                    Let's Build Something Great Together
+                </h2>
+
+                <p>
+                    Open to Software Engineer and .NET Developer opportunities.
+                </p>
+
+                <div class="contact-info">
+
+                    <span>
+                        📧 snehithkamani@gmail.com
+                    </span>
+
+                    <span>
+                        📱 +91 8247840699
+                    </span>
+
+                    <span>
+                        📍 Hyderabad, India
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
