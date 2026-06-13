@@ -76,9 +76,10 @@ body{
 }
 
 .logo{
-    font-size:1.8rem;
+    font-size:1.3rem;
     font-weight:800;
-    color:var(--primary);
+    letter-spacing:3px;
+    color:#ffffff;
 }
 
 .nav-links{
@@ -112,6 +113,7 @@ body{
     min-height:100vh;
     display:flex;
     align-items:center;
+    padding-top:120px;
 }
 
 .hero-grid{
